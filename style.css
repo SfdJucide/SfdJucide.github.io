@@ -11,21 +11,28 @@ body {
 }
 
 .inner {
-	display: grid;
+	/* display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px;
+	grid-template-rows: 200px 200px 200px; */
+	display: flex;
+	flex-direction: column;
 }
 
 .img {
-	width: 130px;
+	width: 260px;
+	border-radius: 4px;
 }
 
 .item {
+	align-items: center;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .btn {
-	display: inline-block;
+	margin-top: 8px;
+	width: 80px;
 	padding: 10px 20px;
 	border: none;
 	background: rgb(248, 168, 24);
@@ -41,9 +48,9 @@ body {
 	background: lightgreen;
 }
 
-.usercard {
+/* .usercard {
 	text-align: center;
-}
+} */
 
 /*
 var(--tg-theme-bg-color)
