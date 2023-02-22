@@ -11,9 +11,6 @@ body {
 }
 
 .inner {
-	/* display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 200px 200px 200px; */
 	display: flex;
 	flex-direction: column;
 }
@@ -28,6 +25,12 @@ body {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+}
+
+.product_name {
+	font-size: 16px;
+	margin-top: 8px;
+	font-family: sans-serif;
 }
 
 .btn {

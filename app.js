@@ -9,22 +9,22 @@ let item = "";
 
 let btn1 = document.getElementById("btn1");
 
-btn1.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы выбрали товар 1!");
-		item = "1";
-		tg.MainButton.show();
-	}
-});
+// btn1.addEventListener("click", function(){
+// 	if (tg.MainButton.isVisible) {
+// 		tg.MainButton.hide();
+// 	}
+// 	else {
+// 		tg.MainButton.setText("Вы выбрали товар 1!");
+// 		item = "1";
+// 		tg.MainButton.show();
+// 	}
+// });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 });
 
-// let usercard = document.getElementById("usercard");
+let product_name = document.getElementById("product_name1");
 
 // let p = document.createElement("p");
 
