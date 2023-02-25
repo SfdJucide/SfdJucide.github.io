@@ -7,14 +7,10 @@ tg.MainButton.color = "#2cab37";
 
 document.getElementById('question_form').addEventListener('submit', function(event) {
 	event.preventDefault();
+	tg.sendData(this.question.value);
+	console.log(this.question.value);
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 });
-
-function getFormValue(event) {
-    event.preventDefault();
-	let question = form.querySelector('[question="question"]')
-	console.log(question)
-}
