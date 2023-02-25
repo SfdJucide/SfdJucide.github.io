@@ -5,17 +5,12 @@ tg.expand();
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 
-let form = document.getElementById('question_form');
-form.addEventListener('submit', getFormValue);
-
-let btn1 = document.getElementById("btn1");
+document.getElementById('question_form').addEventListener('submit', function(event) {
+	event.preventDefault();
+});
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
-});
-
-btn1.addEventListener('click', 	function() {
-	tg.sendData("some shit")
 });
 
 function getFormValue(event) {
