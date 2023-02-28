@@ -21,7 +21,7 @@ function sendMessage(text)
 document.getElementById('question_form').addEventListener('submit', function(event) {
 	event.preventDefault();
 	//sendMessage(`${tg.InitDataUnsafe.user.username}\n${this.question.value}`);
-	sendMessage(`${this.question.value}`);
+	sendMessage(this.question.value);
 	Telegram.WebApp.close();
 });
 
