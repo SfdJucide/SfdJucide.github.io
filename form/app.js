@@ -10,12 +10,27 @@ let tg2 = {
     chat_id: "-1001821397769" // The user's(that you want to send a message) telegram chat id
 }
 
+// function sendMessage(text)
+// {
+//     const url = `https://api.telegram.org/bot${tg2.token}/sendMessage?chat_id=${tg2.chat_id}&text=${text}`; // The url to request
+//     const xht = new XMLHttpRequest();
+//     xht.open("GET", url);
+//     xht.send();
+// }
+
 function sendMessage(text)
 {
-    const url = `https://api.telegram.org/bot${tg2.token}/sendMessage?chat_id=${tg2.chat_id}&text=${text}`; // The url to request
+    const url = `https://api.telegram.org/bot${tg2.token}/sendMessage` // The url to request
+
+    const obj = {
+        chat_id: tg2.chat_id, // Telegram chat id
+        text: text // The text to send
+    };
+
     const xht = new XMLHttpRequest();
-    xht.open("GET", url);
-    xht.send();
+    xht.open("POST", url, true);
+    xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    xht.send(JSON.stringify(obj));
 }
 
 document.getElementById('question_form').addEventListener('submit', function(event) {
