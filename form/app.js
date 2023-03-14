@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
 
 tg.expand();
+tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username} ${tg.WebAppUser.id}.`);
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
@@ -21,7 +22,7 @@ function sendMessage(text)
 
 document.getElementById('question_form').addEventListener('submit', function(event) {
 	event.preventDefault();
-    tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
+    	tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username} ${tg.WebAppUser.id}.`);
 	//sendMessage(this.question.value);
 	// tg.sendData(this.question.value);
 	tg.sendData("some shit");
