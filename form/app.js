@@ -21,11 +21,9 @@ function sendMessage(text)
 
 document.getElementById('question_form').addEventListener('submit', function(event) {
 	event.preventDefault();
+    tg.showAlert(`Добро пожаловать, @${tg.WebAppUser.username}.`);
 	//sendMessage(this.question.value);
-	tg.sendData(this.question.value);
+	// tg.sendData(this.question.value);
+	tg.sendData("some shit");
 	Telegram.WebApp.close();
 });
-
-// Telegram.WebApp.onEvent("mainButtonClicked", function(){
-// 	tg.sendData(item);
-// });
